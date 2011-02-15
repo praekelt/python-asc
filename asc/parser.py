@@ -49,6 +49,7 @@ class Track(object):
         self.start_time = start_time
 
     def sanitize(self, text):
+        text = re.sub(' +',' ', text)
         return text.rstrip(' ').title().replace("'S", "'s").replace("'R", "'r")
 
     def __unicode__(self):
