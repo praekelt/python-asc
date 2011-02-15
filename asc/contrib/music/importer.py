@@ -11,4 +11,4 @@ class Importer(object):
             raise ImproperlyConfigured('No ASC_URL setting found.')
 
     def run(self):
-        return [Parser(self.url).now_playing(),]
+        return Parser(self.url).tracks
